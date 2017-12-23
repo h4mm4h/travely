@@ -1,0 +1,415 @@
+@import "normalize";
+@import "layout";
+@import "slick";
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Raleway:300,400,600,700,800,900');
+
+body {
+  font: 400 19px/1.4 'Raleway', sans-serif;
+}
+
+/* Layout */
+.ba-container {
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 1210px;
+}
+
+/* Typography */
+a,
+input[type="submit"],
+input[type="button"],
+button {
+  -webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+  -moz-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+  transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+
+input[type="submit"],
+input[type="button"],
+button,
+.ba-button {
+  font-size: 14px;
+  font-weight: 300;
+  display: inline-block;
+  background-color: #545357;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px 40px;
+}
+
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover,
+.ba-button:hover {
+  background-color: #fd5c08;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+
+  -webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+  -moz-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+  transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+
+}
+
+textarea {
+
+}
+
+.ba-header {
+  padding-bottom: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background: linear-gradient(to bottom,
+          rgba(255, 255, 255, 0.9) 25%,
+          rgba(255, 255, 255, 0.8) 55%,
+          rgba(255, 255, 255, 0.7) 65%,
+          rgba(255, 255, 255, 0.6) 75%,
+          rgba(255, 255, 255, 0.5) 85%,
+          rgba(255, 255, 255, 0) 100%);
+}
+
+.ba-logo {
+  float: left;
+}
+
+.ba-logo {
+  padding-top: 22px;
+}
+
+.ba-nav {
+  float: right;
+  &__menu {
+    margin: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    li {
+      text-align: center;
+      a {
+        font-size: 13px;
+        width: 140px;
+        padding: 15px 0;
+        display: block;
+        text-decoration: none;
+        color: #3f3e41;
+        text-transform: uppercase;
+        span {
+          display: block;
+        }
+        &:hover {
+          color: #fff;
+          background-color: #fd5c08;
+        }
+      }
+    }
+  }
+}
+
+.ba-intro {
+  background: url("../img/bg.jpg") 50% no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 154px;
+  &__content {
+    //padding-top: 413px;
+    max-width: 55%;
+  }
+  &__suptitle {
+    letter-spacing: 0.1em;
+    margin: 0;
+    font-size: 38px;
+    font-weight: 300;
+    text-transform: uppercase;
+
+  }
+  &__title {
+    margin: 0;
+    font-size: 100px;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 0.9;
+    margin-bottom: 10px;
+
+  }
+  &__subtitle {
+    margin: 0;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.474em;
+  }
+}
+
+.ba-cities-header {
+  padding-top: 70px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.ba-cities-text {
+  padding-left: 85px;
+  color: #3f3e41;
+  font-size: 19px;
+  font-weight: 300;
+  p {
+    margin: 0;
+  }
+}
+
+.ba-cities-select {
+  margin-top: 98px;
+  margin-bottom: 40px;
+}
+
+.ba-cities {
+  padding-top: 50px;
+  padding-bottom: 80px;
+  background: url('../img/World-map.jpg') 50% no-repeat;
+  background-size: cover;
+  &__title {
+    text-transform: uppercase;
+    margin: 0;
+    color: #fd5c08;
+    font-size: 80px;
+    font-weight: 800;
+    line-height: 0.9em;
+  }
+  &__subtitle {
+    margin: 0;
+    text-transform: uppercase;
+    color: #3f3e41;
+    font-size: 34px;
+    font-weight: 400;
+  }
+  &__price {
+
+    font-size: 16.01px;
+    font-weight: 300;
+    text-align: left;
+    max-width: 120px;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+
+  }
+  &__price-value {
+    display: inline-block;
+    color: #ffffff;
+    font-size: 42px;
+    font-weight: 800;
+  }
+  &__button {
+    display: block;
+    float: right;
+    margin-right: 20px;
+
+  }
+
+}
+
+.ba-cities__price-color {
+  font-size: 25px;
+  color: #fd5c08;
+  font-weight: 700;
+  display: inline-block;
+}
+
+.ba-cities-float {
+  position: relative;
+
+  text-decoration: none;
+  text-align: center;
+  color: #FFF;
+  display: block;
+  overflow: hidden;
+  img {
+    display: block;
+  }
+  a {
+    color: #fff;
+  }
+}
+
+.ba-overlay {
+  background: #fff;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0.8;
+  transform: translateY(101%);
+  transition: 0.6s ease-in-out;
+  &__content {
+    max-width: 300px;
+    padding: 0 20px;
+    position: absolute;
+    text-align: left;
+    top: 10px;
+  }
+  &__content-title {
+    margin: 0;
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 1.065;
+    text-transform: uppercase;
+    color: #fd5c08;
+    padding-bottom: 15px;
+  }
+  &__content-subtitle {
+    margin: 0;
+    color: #3f3e41;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1.176;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+  }
+  &__content-link {
+    text-transform: uppercase;
+    margin: 0;
+    color: #3f3e41;
+    font-size: 14px;
+    font-weight: 300;
+  }
+}
+
+.ba-cities-float:hover .ba-overlay {
+  transform: translateY(45%);
+}
+
+.ba-cities-float:hover .ba-cities__price {
+  display: none;
+
+}
+
+.ba-safari {
+  padding-top: 50px;
+  padding-bottom: 80px;
+  background: url("../img/safari_bg.jpg") 50% no-repeat;
+  color: #fff;
+  text-align: center;
+  &__offer {
+    font-family: 'Kaushan Script', sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+  }
+  &__suptitle {
+    margin: 0;
+    font-size: 38px;
+    font-weight: 300;
+    line-height: 0.9;
+  }
+  &__title {
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 100px;
+    font-weight: 800;
+    line-height: 1;
+  }
+  &__subtitle {
+    font-size: 19px;
+    font-weight: 300;
+    margin-bottom: 100px;
+  }
+  &__price {
+    background-color: #3f3e41;
+    text-align: left;
+    padding-top: 104px;
+    padding-bottom: 15px;
+  }
+  &__content {
+    background-color: #fff;
+    text-align: left;
+    padding-left: 30px;
+  }
+  &__content-title {
+    color: #fd5c08;
+    font-size: 30px;
+    font-weight: 400;
+  }
+  &__content-text {
+    color: #3f3e41;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  &__content-link {
+    color: #3f3e41;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  &__price-value {
+    margin: 0;
+    color: #fd5c08;
+    font-size: 60px;
+    font-weight: 800;
+    line-height: 0.9;
+  }
+
+}
+
+.ba-safari__price-text {
+  margin: 0;
+  display: block;
+  font-size: 16.01px;
+  font-weight: 400;
+}
+
+.ba-slide {
+  position: relative;
+}
+
+.ba-slide-img {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+}
+
+.ba-map {
+  height: 600px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
