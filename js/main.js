@@ -193,21 +193,21 @@
           position: paris,
           map: baMap,
           animation: google.maps.Animation.DROP,
-          icon: '../img/marker.png'
+          icon: 'img/marker.png'
 				});
 			
 				var marker2 = new google.maps.Marker({
           position: madrid,
           map: baMap,
           animation: google.maps.Animation.DROP,
-          icon: '../img/marker.png'
+          icon: 'img/marker.png'
 				});
 				
 				var marker3 = new google.maps.Marker({
           position: roma,
           map: baMap,
           animation: google.maps.Animation.DROP,
-          icon: '../img/marker.png'
+          icon: 'img/marker.png'
         });
 	}
 
